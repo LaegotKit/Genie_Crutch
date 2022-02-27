@@ -1,0 +1,69 @@
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\bin\Debug\GenieCrutch.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\bin\Debug\GenieCrutch.pdb
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\bin\Debug\GenieCrutch.xml
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\bin\Debug\Interfaces.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Body.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\CrutchTab.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\DialogTouchWho.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\StatusBar.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\CrutchForm.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Resources.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Plugin Crutch.vbproj.GenerateResource.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Plugin Crutch.vbproj.CoreCompileInputs.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Plugin Crutch.vbproj.CopyComplete
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\GenieCrutch.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\GenieCrutch.xml
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\GenieCrutch.pdb
+C:\Users\Jon\Desktop\genieplugin-crutch\trunk - Copy (3)\obj\Debug\Plugin Crutch.vbproj.AssemblyReference.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.AssemblyReference.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Body.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\CrutchTab.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\DialogTouchWho.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\StatusBar.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\CrutchForm.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Resources.resources
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.GenerateResource.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.CoreCompileInputs.cache
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\GenieCrutch.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\GenieCrutch.xml
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\GenieCrutch.pdb
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\bin\Debug\GenieCrutch.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\bin\Debug\GenieCrutch.pdb
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\bin\Debug\GenieCrutch.xml
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\bin\Debug\Interfaces.dll
+C:\Users\Jon\Desktop\genieplugin-crutch\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.CopyComplete
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\bin\Debug\GenieCrutch.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\bin\Debug\GenieCrutch.pdb
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\bin\Debug\GenieCrutch.xml
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\bin\Debug\Interfaces.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.AssemblyReference.cache
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Body.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\CrutchTab.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\DialogTouchWho.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\StatusBar.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\CrutchForm.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Resources.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.GenerateResource.cache
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.CoreCompileInputs.cache
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\Plugin Crutch.vbproj.CopyComplete
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\GenieCrutch.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\GenieCrutch.xml
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0\obj\Debug\GenieCrutch.pdb
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\bin\Debug\GenieCrutch.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\bin\Debug\GenieCrutch.pdb
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\bin\Debug\GenieCrutch.xml
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\bin\Debug\Interfaces.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Body.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\CrutchTab.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\DialogTouchWho.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\StatusBar.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\CrutchForm.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Resources.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Plugin Crutch.vbproj.GenerateResource.cache
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Plugin Crutch.vbproj.CoreCompileInputs.cache
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Plugin Crutch.vbproj.CopyComplete
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\GenieCrutch.dll
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\GenieCrutch.xml
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\GenieCrutch.pdb
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\AdvancedSettingsTab.resources
+C:\Users\RAWR!\Dropbox\HackTheMatrix\Uncle J's Regex Rumba\trunkV2.0 - Copy\obj\Debug\Plugin Crutch.vbproj.AssemblyReference.cache

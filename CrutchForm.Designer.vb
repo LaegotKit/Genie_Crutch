@@ -19,8 +19,18 @@ Partial Class CrutchForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CrutchForm))
         Me.TabPatients = New System.Windows.Forms.TabControl()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Op1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Op2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonTouch = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonBreak = New System.Windows.Forms.ToolStripButton()
@@ -36,7 +46,12 @@ Partial Class CrutchForm
         Me.LeaveBleedersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButtonTakeAll = New System.Windows.Forms.ToolStripButton()
         Me.AdvancedSettingForm = New System.Windows.Forms.ToolStripButton()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CloseTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseOtherTabsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.MenuToolStrip1.SuspendLayout()
+        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabPatients
@@ -48,6 +63,60 @@ Partial Class CrutchForm
         Me.TabPatients.Size = New System.Drawing.Size(173, 348)
         Me.TabPatients.TabIndex = 1
         Me.TabPatients.Tag = ""
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripSeparator1, Me.ToolStripMenuItem4, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
+        Me.ContextMenuStrip1.Name = "Link Menu"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(151, 104)
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem1.Text = "Link Persistent"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem2.Text = "Link Hodierna"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(147, 6)
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Op1ToolStripMenuItem, Me.Op2ToolStripMenuItem})
+        Me.ToolStripMenuItem4.Enabled = False
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem4.Text = "Shift"
+        '
+        'Op1ToolStripMenuItem
+        '
+        Me.Op1ToolStripMenuItem.Name = "Op1ToolStripMenuItem"
+        Me.Op1ToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.Op1ToolStripMenuItem.Text = "Op1"
+        '
+        'Op2ToolStripMenuItem
+        '
+        Me.Op2ToolStripMenuItem.Name = "Op2ToolStripMenuItem"
+        Me.Op2ToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.Op2ToolStripMenuItem.Text = "op2"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(147, 6)
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem3.Text = "Link Unity"
         '
         'MenuToolStrip1
         '
@@ -90,19 +159,19 @@ Partial Class CrutchForm
         'TakeMinorToolStripMenuItem
         '
         Me.TakeMinorToolStripMenuItem.Name = "TakeMinorToolStripMenuItem"
-        Me.TakeMinorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TakeMinorToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.TakeMinorToolStripMenuItem.Text = "Take Minor"
         '
         'TakeAllToolStripMenuItem
         '
         Me.TakeAllToolStripMenuItem.Name = "TakeAllToolStripMenuItem"
-        Me.TakeAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TakeAllToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.TakeAllToolStripMenuItem.Text = "Take All"
         '
         'ToolStripMenuSeperator1
         '
         Me.ToolStripMenuSeperator1.Name = "ToolStripMenuSeperator1"
-        Me.ToolStripMenuSeperator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuSeperator1.Size = New System.Drawing.Size(164, 6)
         '
         'IncludingInternalToolStripMenuItem
         '
@@ -110,7 +179,7 @@ Partial Class CrutchForm
         Me.IncludingInternalToolStripMenuItem.CheckOnClick = True
         Me.IncludingInternalToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.IncludingInternalToolStripMenuItem.Name = "IncludingInternalToolStripMenuItem"
-        Me.IncludingInternalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IncludingInternalToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.IncludingInternalToolStripMenuItem.Text = "Including Internal"
         '
         'IncludingScarsToolStripMenuItem
@@ -119,33 +188,33 @@ Partial Class CrutchForm
         Me.IncludingScarsToolStripMenuItem.CheckOnClick = True
         Me.IncludingScarsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.IncludingScarsToolStripMenuItem.Name = "IncludingScarsToolStripMenuItem"
-        Me.IncludingScarsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IncludingScarsToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.IncludingScarsToolStripMenuItem.Text = "Including Scars"
         '
         'ToolStripMenuSeperator2
         '
         Me.ToolStripMenuSeperator2.Name = "ToolStripMenuSeperator2"
-        Me.ToolStripMenuSeperator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuSeperator2.Size = New System.Drawing.Size(164, 6)
         '
         'QuickToolStripMenuItem
         '
         Me.QuickToolStripMenuItem.CheckOnClick = True
         Me.QuickToolStripMenuItem.Name = "QuickToolStripMenuItem"
-        Me.QuickToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.QuickToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.QuickToolStripMenuItem.Text = "Quick"
         '
         'HalfOnMajorToolStripMenuItem
         '
         Me.HalfOnMajorToolStripMenuItem.CheckOnClick = True
         Me.HalfOnMajorToolStripMenuItem.Name = "HalfOnMajorToolStripMenuItem"
-        Me.HalfOnMajorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HalfOnMajorToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.HalfOnMajorToolStripMenuItem.Text = "Half On Major"
         '
         'LeaveBleedersToolStripMenuItem
         '
         Me.LeaveBleedersToolStripMenuItem.CheckOnClick = True
         Me.LeaveBleedersToolStripMenuItem.Name = "LeaveBleedersToolStripMenuItem"
-        Me.LeaveBleedersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LeaveBleedersToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.LeaveBleedersToolStripMenuItem.Text = "Leave Bleeders"
         '
         'ToolStripButtonTakeAll
@@ -171,6 +240,24 @@ Partial Class CrutchForm
         Me.AdvancedSettingForm.Text = "Advanced"
         Me.AdvancedSettingForm.ToolTipText = "Advanced settings"
         '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseTabToolStripMenuItem, Me.CloseOtherTabsToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(163, 48)
+        '
+        'CloseTabToolStripMenuItem
+        '
+        Me.CloseTabToolStripMenuItem.Name = "CloseTabToolStripMenuItem"
+        Me.CloseTabToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.CloseTabToolStripMenuItem.Text = "Close Tab"
+        '
+        'CloseOtherTabsToolStripMenuItem
+        '
+        Me.CloseOtherTabsToolStripMenuItem.Name = "CloseOtherTabsToolStripMenuItem"
+        Me.CloseOtherTabsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.CloseOtherTabsToolStripMenuItem.Text = "Close Other Tabs"
+        '
         'CrutchForm
         '
         Me.ClientSize = New System.Drawing.Size(173, 373)
@@ -184,8 +271,10 @@ Partial Class CrutchForm
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Genie Crutch"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.MenuToolStrip1.ResumeLayout(False)
         Me.MenuToolStrip1.PerformLayout()
+        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -206,4 +295,16 @@ Partial Class CrutchForm
     Friend WithEvents ToolStripButtonTakeAll As System.Windows.Forms.ToolStripButton
     Friend WithEvents LeaveBleedersToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents AdvancedSettingForm As Windows.Forms.ToolStripButton
+    Friend WithEvents ContextMenuStrip1 As Windows.Forms.ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripMenuItem4 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Op1ToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Op2ToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripMenuItem3 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip2 As Windows.Forms.ContextMenuStrip
+    Friend WithEvents CloseTabToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CloseOtherTabsToolStripMenuItem As Windows.Forms.ToolStripMenuItem
 End Class

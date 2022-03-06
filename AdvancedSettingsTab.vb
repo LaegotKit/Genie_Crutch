@@ -143,6 +143,16 @@ Public Class AdvancedSettingsTab
     Private Sub LabelSpellBS_clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellBS.MouseClick
         RaiseEvent TouchType("BS")
     End Sub
+
+    Private Sub Show_Hide_ButtonClicked(sender As Object, e As EventArgs) Handles ShowButton.Click
+        If Crutch.m_SHButton = True Then
+            Crutch.m_SHButton = False
+            ShowButton.Text = "Show"
+        ElseIf Crutch.m_SHButton = False Then
+            Crutch.m_SHButton = True
+            ShowButton.Text = "Hide"
+        End If
+    End Sub
 #End Region
 
 End Class

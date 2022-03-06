@@ -60,6 +60,7 @@ Partial Class AdvancedSettingsTab
         Me.TextBoxTimerBS = New System.Windows.Forms.TextBox()
         Me.LabelSpellBS = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ShowButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonClose
@@ -473,9 +474,19 @@ Partial Class AdvancedSettingsTab
         Me.Label1.TabIndex = 76
         Me.Label1.Text = "Mana"
         '
+        'ShowButton
+        '
+        Me.ShowButton.Location = New System.Drawing.Point(16, 63)
+        Me.ShowButton.Name = "ShowButton"
+        Me.ShowButton.Size = New System.Drawing.Size(58, 23)
+        Me.ShowButton.TabIndex = 77
+        Me.ShowButton.Text = "HIde"
+        Me.ShowButton.UseVisualStyleBackColor = True
+        '
         'AdvancedSettingsTab
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
+        Me.Controls.Add(Me.ShowButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelSpellBS)
         Me.Controls.Add(Me.TextBoxTimerBS)
@@ -558,4 +569,5 @@ Partial Class AdvancedSettingsTab
     Friend WithEvents TextBoxTimerBS As Windows.Forms.TextBox
     Friend WithEvents LabelSpellBS As Windows.Forms.Label
     Friend WithEvents Label1 As Windows.Forms.Label
+    Friend WithEvents ShowButton As Windows.Forms.Button
 End Class

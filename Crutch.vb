@@ -7,8 +7,8 @@ Public Class Crutch
     Private m_Host As GeniePlugin.Interfaces.IHost
     Private m_Form As CrutchForm
     Private m_Config As XMLConfig
-
-    Public Shared testvar As String = "testvar"
+    Public Shared m_SHButton As Boolean = True
+    Public Shared m_Shown As Boolean = False
 
     Public ReadOnly Property Description() As String Implements GeniePlugin.Interfaces.IPlugin.Description
         Get
@@ -108,7 +108,7 @@ Public Class Crutch
         If IsNothing(m_Form) Then Return Text ' Bail if no window
 
         Try
-            If Not IsNothing(m_Host) Then
+            If Not IsNothing(m_Host) And (Crutch.m_SHButton = True Or Crutch.m_Shown = True) Then
                 m_iCurrentWoundLevel = 0
                 If Text.StartsWith("You reluctantly touch ") Then
                     m_Patient = Text.Substring(22).Replace(".", "").Replace(", a faint expression of distaste on your face", "").Trim

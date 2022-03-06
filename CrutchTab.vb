@@ -182,5 +182,4 @@ Public Class CrutchTab
     Private Sub ButtonClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonClose.Click
         RaiseEvent CloseTab()
     End Sub
-
 End Class

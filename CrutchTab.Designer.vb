@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CrutchTab
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,22 @@ Partial Class CrutchTab
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CrutchTab))
         Me.PoisonCount = New System.Windows.Forms.Label()
-        Me.Vitality = New StatusBar()
         Me.LabelSI = New System.Windows.Forms.Label()
         Me.LabelFI = New System.Windows.Forms.Label()
         Me.LabelSE = New System.Windows.Forms.Label()
+        Me.LabelFE = New System.Windows.Forms.Label()
+        Me.ButtonClose = New System.Windows.Forms.Button()
+        Me.Vitality = New StatusBar()
         Me.Disease = New BodyPart()
         Me.Poison = New BodyPart()
-        Me.LabelFE = New System.Windows.Forms.Label()
         Me.BodyScarInternal = New Body()
         Me.BodyFreshInternal = New Body()
         Me.BodyScarExternal = New Body()
         Me.BodyFreshExternal = New Body()
-        Me.ButtonClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'PoisonCount
@@ -48,20 +48,6 @@ Partial Class CrutchTab
         Me.PoisonCount.Text = "0"
         Me.PoisonCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.PoisonCount.Visible = False
-        '
-        'Vitality
-        '
-        Me.Vitality.BackColor = System.Drawing.Color.Black
-        Me.Vitality.BackgroundColor = System.Drawing.Color.Black
-        Me.Vitality.BarText = "Vitality"
-        Me.Vitality.BorderColor = System.Drawing.Color.Gray
-        Me.Vitality.ForegroundColor = System.Drawing.Color.Gray
-        Me.Vitality.Location = New System.Drawing.Point(5, 5)
-        Me.Vitality.Margin = New System.Windows.Forms.Padding(0)
-        Me.Vitality.Name = "Vitality"
-        Me.Vitality.Size = New System.Drawing.Size(135, 17)
-        Me.Vitality.TabIndex = 28
-        Me.Vitality.Value = 0
         '
         'LabelSI
         '
@@ -93,6 +79,40 @@ Partial Class CrutchTab
         Me.LabelSE.Text = "Scar External"
         Me.LabelSE.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'LabelFE
+        '
+        Me.LabelFE.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelFE.Location = New System.Drawing.Point(2, 158)
+        Me.LabelFE.Name = "LabelFE"
+        Me.LabelFE.Size = New System.Drawing.Size(82, 13)
+        Me.LabelFE.TabIndex = 22
+        Me.LabelFE.Text = "Fresh External"
+        Me.LabelFE.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'ButtonClose
+        '
+        Me.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
+        Me.ButtonClose.Location = New System.Drawing.Point(144, 5)
+        Me.ButtonClose.Name = "ButtonClose"
+        Me.ButtonClose.Size = New System.Drawing.Size(17, 17)
+        Me.ButtonClose.TabIndex = 30
+        Me.ButtonClose.UseVisualStyleBackColor = True
+        '
+        'Vitality
+        '
+        Me.Vitality.BackColor = System.Drawing.Color.Black
+        Me.Vitality.BackgroundColor = System.Drawing.Color.Black
+        Me.Vitality.BarText = "Vitality"
+        Me.Vitality.BorderColor = System.Drawing.Color.Gray
+        Me.Vitality.ForegroundColor = System.Drawing.Color.Gray
+        Me.Vitality.Location = New System.Drawing.Point(5, 5)
+        Me.Vitality.Margin = New System.Windows.Forms.Padding(0)
+        Me.Vitality.Name = "Vitality"
+        Me.Vitality.Size = New System.Drawing.Size(135, 17)
+        Me.Vitality.TabIndex = 28
+        Me.Vitality.Value = 0
+        '
         'Disease
         '
         Me.Disease.BodyPart = Body.Part.Head
@@ -118,16 +138,6 @@ Partial Class CrutchTab
         Me.Poison.TabIndex = 23
         Me.Poison.TabStop = False
         Me.Poison.Text = "P"
-        '
-        'LabelFE
-        '
-        Me.LabelFE.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelFE.Location = New System.Drawing.Point(2, 158)
-        Me.LabelFE.Name = "LabelFE"
-        Me.LabelFE.Size = New System.Drawing.Size(82, 13)
-        Me.LabelFE.TabIndex = 22
-        Me.LabelFE.Text = "Fresh External"
-        Me.LabelFE.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'BodyScarInternal
         '
@@ -160,16 +170,6 @@ Partial Class CrutchTab
         Me.BodyFreshExternal.Name = "BodyFreshExternal"
         Me.BodyFreshExternal.Size = New System.Drawing.Size(63, 134)
         Me.BodyFreshExternal.TabIndex = 18
-        '
-        'ButtonClose
-        '
-        Me.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
-        Me.ButtonClose.Location = New System.Drawing.Point(144, 5)
-        Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(17, 17)
-        Me.ButtonClose.TabIndex = 30
-        Me.ButtonClose.UseVisualStyleBackColor = True
         '
         'CrutchTab
         '
@@ -205,5 +205,4 @@ Partial Class CrutchTab
     Friend WithEvents BodyScarExternal As Body
     Friend WithEvents BodyFreshExternal As Body
     Friend WithEvents ButtonClose As System.Windows.Forms.Button
-
 End Class

@@ -92,6 +92,7 @@ Public Class CrutchForm
         Me.Show()
         Me.BringToFront()
         Me.Enabled = True
+        Crutch.m_Shown = True
     End Sub
     
 
@@ -169,6 +170,7 @@ Public Class CrutchForm
     Private Sub Form_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Closing
         If m_IsClosing = False Then
             Me.Hide()
+            Crutch.m_Shown = False
             e.Cancel = True
         End If
     End Sub
@@ -595,5 +597,79 @@ Public Class CrutchForm
     Private Sub ToolStripButtonTakeAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButtonTakeAll.Click
             TakeAll()
         End Sub
+
+#Region "Contextmenu"
+    Public Shared m_TabIndex As Integer = -1
+    Public Shared cm_Patient As String = "none"
+
+    Private Sub CrutchTabHeader_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TabPatients.MouseClick
+
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            m_TabIndex = TabControlHitTest(TabPatients, e.Location)
+            cm_Patient = TabPatients.TabPages(m_TabIndex).Text
+            If m_TabIndex >= 0 And (cm_Patient IsNot "Self" And cm_Patient IsNot "Advanced") Then
+                ContextMenuStrip1.Show(System.Windows.Forms.Control.MousePosition)
+            End If
+        End If
+
+    End Sub
+    Private Sub CrutchTabHeader_DoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TabPatients.DoubleClick
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            m_TabIndex = TabControlHitTest(TabPatients, e.Location)
+            If m_TabIndex >= 0 Then
+                ContextMenuStrip2.Show(System.Windows.Forms.Control.MousePosition)
+            End If
+        End If
+    End Sub
+
+    Private Function TabControlHitTest(ByVal TabCtrl As TabControl, ByVal pt As Point) As Integer
+
+        For i As Integer = 0 To TabCtrl.TabPages.Count - 1
+            If TabCtrl.GetTabRect(i).Contains(pt) Then
+                Return i
+            End If
+        Next
+        Return -1
+    End Function
+
+    Private Sub ContextMenuL_clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles ContextMenuStrip1.ItemClicked
+
+        Dim cm_Patient As String
+        Dim cm_option As String = Mid(e.ClickedItem.Text, 5)
+        cm_Patient = TabPatients.TabPages(m_TabIndex).Text
+        If cm_Patient IsNot "Self" And cm_Patient IsNot "Advanced" Then
+            If e.ClickedItem.Text IsNot "Shift" Then
+                m_Host.SendText("#send -.25Link " & cm_Patient & cm_option)
+            End If
+        End If
+    End Sub
+    Private Sub ContextMenuClose_clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles ContextMenuStrip2.ItemClicked
+        If e.ClickedItem.Text Is "Close Tab" Then
+            TabPatients.TabPages.Remove(TabPatients.SelectedTab)
+        ElseIf e.ClickedItem.Text Is "Close Other Tabs" Then
+            For Each tab As TabPage In TabPatients.TabPages
+                If tab IsNot TabPatients.SelectedTab Then
+                    TabPatients.TabPages.Remove(tab)
+                End If
+            Next
+        End If
+
+    End Sub
+    Private Sub ContextMenuS_clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles ToolStripMenuItem4.DropDownItemClicked
+
+        Dim cm_Patient As String
+        Dim cm_option As String = e.ClickedItem.Text
+        cm_Patient = TabPatients.TabPages(m_TabIndex).Text
+        If cm_Patient IsNot "Self" And cm_Patient IsNot "Advanced" Then
+            If e.ClickedItem.Text IsNot "Shift" Then
+                m_Host.SendText("#send -.25Shift " & cm_Patient & cm_option)
+            End If
+
+        End If
+    End Sub
+
+
+
+#End Region
 
 End Class

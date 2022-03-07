@@ -5,4 +5,7 @@
 
 ![image](https://user-images.githubusercontent.com/100539902/155904554-3a894da7-dc6f-40ff-8b9b-611419ba5c6c.png)
 
+Right clicking on tab headers will open a Link menu for the selected tab and double clicking will open a menu for either closing the clicked tab or all others.
+
+
 ![image](https://user-images.githubusercontent.com/100539902/156951025-b26efc12-b5a9-49c3-8b4b-3761478672eb.png)

@@ -50,6 +50,10 @@ Partial Class CrutchForm
         Me.CloseTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseOtherTabsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TakeAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TakeHalfToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TakePartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TakeMostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.MenuToolStrip1.SuspendLayout()
         Me.ContextMenuStrip2.SuspendLayout()
@@ -67,9 +71,10 @@ Partial Class CrutchForm
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripSeparator1, Me.ToolStripMenuItem4, Me.ToolStripSeparator2, Me.ToolStripMenuItem3, Me.TakeAllToolStripMenuItem1})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripSeparator3, Me.TakeAllToolStripMenuItem1, Me.TakePartToolStripMenuItem, Me.TakeHalfToolStripMenuItem, Me.TakeMostToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripMenuItem4, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
         Me.ContextMenuStrip1.Name = "Link Menu"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 148)
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(156, 220)
         '
         'ToolStripMenuItem1
         '
@@ -245,7 +250,8 @@ Partial Class CrutchForm
         '
         Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseTabToolStripMenuItem, Me.CloseOtherTabsToolStripMenuItem})
         Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
-        Me.ContextMenuStrip2.Size = New System.Drawing.Size(163, 48)
+        Me.ContextMenuStrip2.ShowImageMargin = False
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(138, 48)
         '
         'CloseTabToolStripMenuItem
         '
@@ -264,6 +270,29 @@ Partial Class CrutchForm
         Me.TakeAllToolStripMenuItem1.Name = "TakeAllToolStripMenuItem1"
         Me.TakeAllToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.TakeAllToolStripMenuItem1.Text = "Take All"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(152, 6)
+        '
+        'TakeHalfToolStripMenuItem
+        '
+        Me.TakeHalfToolStripMenuItem.Name = "TakeHalfToolStripMenuItem"
+        Me.TakeHalfToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.TakeHalfToolStripMenuItem.Text = "Take Half"
+        '
+        'TakePartToolStripMenuItem
+        '
+        Me.TakePartToolStripMenuItem.Name = "TakePartToolStripMenuItem"
+        Me.TakePartToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.TakePartToolStripMenuItem.Text = "Take Part"
+        '
+        'TakeMostToolStripMenuItem
+        '
+        Me.TakeMostToolStripMenuItem.Name = "TakeMostToolStripMenuItem"
+        Me.TakeMostToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.TakeMostToolStripMenuItem.Text = "Take Most"
         '
         'CrutchForm
         '
@@ -315,4 +344,8 @@ Partial Class CrutchForm
     Friend WithEvents CloseTabToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseOtherTabsToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents TakeAllToolStripMenuItem1 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As Windows.Forms.ToolStripSeparator
+    Friend WithEvents TakePartToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TakeHalfToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TakeMostToolStripMenuItem As Windows.Forms.ToolStripMenuItem
 End Class

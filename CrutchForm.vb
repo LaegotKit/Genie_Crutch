@@ -650,7 +650,13 @@ Public Class CrutchForm
                 ElseIf cm_option = " Unity" Then
                     m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Link " & cm_Patient & cm_option)
                 ElseIf e.ClickedItem.Text = "Take All" Then
-                    TakeAll()
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Take " & cm_Patient & IIf(bQuickMode, " quick", "") & " all")
+                ElseIf e.ClickedItem.Text = "Take Part" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Take " & cm_Patient & " part" & IIf(bQuickMode, " quick", "") & " all")
+                ElseIf e.ClickedItem.Text = "Take Half" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Take " & cm_Patient & " half" & IIf(bQuickMode, " quick", "") & " all")
+                ElseIf e.ClickedItem.Text = "Take Most" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Take " & cm_Patient & " most" & IIf(bQuickMode, " quick", "") & " all")
                 End If
             End If
         End If

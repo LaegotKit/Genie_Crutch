@@ -1,5 +1,6 @@
 Imports System.Xml
 Imports System.Drawing
+Imports System.Text.RegularExpressions
 
 Public Class Crutch
     Implements GeniePlugin.Interfaces.IPlugin
@@ -147,9 +148,14 @@ Public Class Crutch
                 End If
 
                 If m_bIsParsing = True And Text.StartsWith("    The presence of ") Then
-                    m_Patient = Text.Substring(20).Replace(".", "").Replace(", a fellow Empath", "").Trim
-                    SetPatient(m_Patient)
-                    m_Form.ResetImages()
+                    Dim regex As Regex = New Regex("^    The presence of ([\w\-\']+)[\.\,]")
+                    Dim match As Match = regex.Match(Text)
+                    If match.Success Then
+                        m_Patient = match.Groups(1).Value
+                        '                     m_Patient = Text.Substring(20).Replace(".", "").Replace(", a fellow Empath", "").Replace("  You also sense a faint greenish tinge about his life essence", "").Trim
+                        SetPatient(m_Patient)
+                        m_Form.ResetImages()
+                    End If
                 End If
 
 

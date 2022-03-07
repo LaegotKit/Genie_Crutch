@@ -481,7 +481,7 @@ Partial Class AdvancedSettingsTab
         Me.ShowButton.Name = "ShowButton"
         Me.ShowButton.Size = New System.Drawing.Size(58, 23)
         Me.ShowButton.TabIndex = 77
-        Me.ShowButton.Text = "HIde"
+        Me.ShowButton.Text = "Hide"
         Me.ShowButton.UseVisualStyleBackColor = True
         '
         'TouchWho

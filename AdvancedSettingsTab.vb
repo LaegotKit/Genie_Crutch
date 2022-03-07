@@ -153,6 +153,15 @@ Public Class AdvancedSettingsTab
             ShowButton.Text = "Hide"
         End If
     End Sub
+    Private Sub TouchWho_ButtonClicked(sender As Object, e As EventArgs) Handles TouchWho.Click
+        If Crutch.m_TWButton = True Then
+            Crutch.m_TWButton = False
+            TouchWho.Text = "P-Health"
+        ElseIf Crutch.m_TWButton = False Then
+            Crutch.m_TWButton = True
+            TouchWho.Text = "TouchW"
+        End If
+    End Sub
 #End Region
 
 End Class

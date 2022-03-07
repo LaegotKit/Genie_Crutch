@@ -49,6 +49,7 @@ Partial Class CrutchForm
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CloseTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseOtherTabsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TakeAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.MenuToolStrip1.SuspendLayout()
         Me.ContextMenuStrip2.SuspendLayout()
@@ -66,33 +67,33 @@ Partial Class CrutchForm
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripSeparator1, Me.ToolStripMenuItem4, Me.ToolStripSeparator2, Me.ToolStripMenuItem3})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripSeparator1, Me.ToolStripMenuItem4, Me.ToolStripSeparator2, Me.ToolStripMenuItem3, Me.TakeAllToolStripMenuItem1})
         Me.ContextMenuStrip1.Name = "Link Menu"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(151, 104)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 148)
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripMenuItem1.Text = "Link Persistent"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripMenuItem2.Text = "Link Hodierna"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(147, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Op1ToolStripMenuItem, Me.Op2ToolStripMenuItem})
         Me.ToolStripMenuItem4.Enabled = False
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripMenuItem4.Text = "Shift"
         '
         'Op1ToolStripMenuItem
@@ -110,12 +111,12 @@ Partial Class CrutchForm
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(147, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(150, 22)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripMenuItem3.Text = "Link Unity"
         '
         'MenuToolStrip1
@@ -258,6 +259,12 @@ Partial Class CrutchForm
         Me.CloseOtherTabsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.CloseOtherTabsToolStripMenuItem.Text = "Close Other Tabs"
         '
+        'TakeAllToolStripMenuItem1
+        '
+        Me.TakeAllToolStripMenuItem1.Name = "TakeAllToolStripMenuItem1"
+        Me.TakeAllToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.TakeAllToolStripMenuItem1.Text = "Take All"
+        '
         'CrutchForm
         '
         Me.ClientSize = New System.Drawing.Size(173, 373)
@@ -307,4 +314,5 @@ Partial Class CrutchForm
     Friend WithEvents ContextMenuStrip2 As Windows.Forms.ContextMenuStrip
     Friend WithEvents CloseTabToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseOtherTabsToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TakeAllToolStripMenuItem1 As Windows.Forms.ToolStripMenuItem
 End Class

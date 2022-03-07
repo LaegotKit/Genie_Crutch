@@ -61,6 +61,7 @@ Partial Class AdvancedSettingsTab
         Me.LabelSpellBS = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ShowButton = New System.Windows.Forms.Button()
+        Me.TouchWho = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonClose
@@ -483,9 +484,19 @@ Partial Class AdvancedSettingsTab
         Me.ShowButton.Text = "HIde"
         Me.ShowButton.UseVisualStyleBackColor = True
         '
+        'TouchWho
+        '
+        Me.TouchWho.Location = New System.Drawing.Point(88, 63)
+        Me.TouchWho.Name = "TouchWho"
+        Me.TouchWho.Size = New System.Drawing.Size(58, 23)
+        Me.TouchWho.TabIndex = 78
+        Me.TouchWho.Text = "TouchWho"
+        Me.TouchWho.UseVisualStyleBackColor = True
+        '
         'AdvancedSettingsTab
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
+        Me.Controls.Add(Me.TouchWho)
         Me.Controls.Add(Me.ShowButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelSpellBS)
@@ -570,4 +581,5 @@ Partial Class AdvancedSettingsTab
     Friend WithEvents LabelSpellBS As Windows.Forms.Label
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents ShowButton As Windows.Forms.Button
+    Friend WithEvents TouchWho As Windows.Forms.Button
 End Class

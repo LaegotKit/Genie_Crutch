@@ -181,10 +181,14 @@ Public Class CrutchForm
         If m_Patient.Length > 0 Then
             SetParseTBPatient("touch")
         Else
-            m_oDialogTouchWho.TextBoxWho.Text = ""
-            m_oDialogTouchWho.TextBoxWho.Focus()
-            If m_oDialogTouchWho.ShowDialog() = Windows.Forms.DialogResult.OK Then
-                m_Host.SendText("touch " & m_oDialogTouchWho.TextBoxWho.Text)
+            If m_TWButton = True Then
+                m_oDialogTouchWho.TextBoxWho.Text = ""
+                m_oDialogTouchWho.TextBoxWho.Focus()
+                If m_oDialogTouchWho.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                    m_Host.SendText("touch " & m_oDialogTouchWho.TextBoxWho.Text)
+                End If
+            ElseIf m_TWButton = False Then
+                m_Host.SendText("#send -.25 Perceive health")
             End If
         End If
     End Sub
@@ -429,7 +433,7 @@ Public Class CrutchForm
 
     Private Sub HealthBar_Click()
         If m_Patient IsNot "Self" Then
-            m_Host.SendText("#send take " & m_Patient & " vitality")
+            m_Host.SendText("#send -.5take " & m_Patient & " vitality")
         ElseIf m_Patient Is "Self" Then
             m_Host.SendText("#send -.5prep VH " & m_Host.Variable("GCTextBoxManaVH") & ";-" & m_Host.Variable("GCTextBoxDelayVH") & "cast ")
         End If
@@ -437,7 +441,7 @@ Public Class CrutchForm
 
     Private Sub Poison_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If m_Patient IsNot "Self" Then
-            m_Host.SendText("#send take " & m_Patient & " poison")
+            m_Host.SendText("#send -.5take " & m_Patient & " poison")
         ElseIf m_Patient Is "Self" Then
             m_Host.SendText("#send -.5prep FP " & m_Host.Variable("GCTextBoxManaFP") & ";-" & m_Host.Variable("GCTextBoxDelayFP") & "cast ")
         End If
@@ -445,7 +449,7 @@ Public Class CrutchForm
 
     Private Sub Disease_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If m_Patient IsNot "Self" Then
-            m_Host.SendText("#send take " & m_Patient & " disease")
+            m_Host.SendText("#send -.5take " & m_Patient & " disease")
         ElseIf m_Patient Is "Self" Then
             m_Host.SendText("#send -.5prep CD " & m_Host.Variable("GCTextBoxManaCD") & ";-" & m_Host.Variable("GCTextBoxDelayCD") & "cast ")
         End If
@@ -639,7 +643,15 @@ Public Class CrutchForm
         cm_Patient = TabPatients.TabPages(m_TabIndex).Text
         If cm_Patient IsNot "Self" And cm_Patient IsNot "Advanced" Then
             If e.ClickedItem.Text IsNot "Shift" Then
-                m_Host.SendText("#send -.25Link " & cm_Patient & cm_option)
+                If cm_option = " Persistent" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Link " & cm_Patient & cm_option)
+                ElseIf cm_option = " Hodierna" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Link " & cm_Patient & " Persistent" & ";-.25Link " & cm_Patient & cm_option)
+                ElseIf cm_option = " Unity" Then
+                    m_Host.SendText("#send -.25Touch " & cm_Patient & ";-.25Link " & cm_Patient & cm_option)
+                ElseIf e.ClickedItem.Text = "Take All" Then
+                    TakeAll()
+                End If
             End If
         End If
     End Sub

@@ -8,6 +8,7 @@ Public Class Crutch
     Private m_Form As CrutchForm
     Private m_Config As XMLConfig
     Public Shared m_SHButton As Boolean = True
+    Public Shared m_TWButton As Boolean = True
     Public Shared m_Shown As Boolean = False
 
     Public ReadOnly Property Description() As String Implements GeniePlugin.Interfaces.IPlugin.Description
@@ -139,6 +140,19 @@ Public Class Crutch
                     m_Form.ResetImages()
                 End If
 
+                If Text.StartsWith("You sense :") Or Text.StartsWith("You close your eyes, drawing all your thoughts inward") Then
+                    If Crutch.m_TWButton = False Then
+                        m_bIsParsing = True
+                    End If
+                End If
+
+                If m_bIsParsing = True And Text.StartsWith("    The presence of ") Then
+                    m_Patient = Text.Substring(20).Replace(".", "").Replace(", a fellow Empath", "").Trim
+                    SetPatient(m_Patient)
+                    m_Form.ResetImages()
+                End If
+
+
                 If m_bIsParsing = True Then
                     If Text.StartsWith(m_Patient & " has ") Or Text.StartsWith("You have ") Then
                         If Text.Trim.EndsWith("normal vitality.") Then
@@ -154,6 +168,9 @@ Public Class Crutch
                         m_Host.EchoText("Target Vitality Loss = " & sVitality)
                         m_Form.SetVitality(100 - Integer.Parse(sVitality))
 
+                        m_bIsParsing = False
+                    End If
+                    If Text.StartsWith("Roundtime") Or Text.StartsWith("You sense (") Or Text.EndsWith("from your current position: ") Then
                         m_bIsParsing = False
                     End If
 

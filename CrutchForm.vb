@@ -303,7 +303,7 @@ Public Class CrutchForm
 
     Private Sub SetParseTBPatient(ByVal TBAction As String)
         If m_Patient IsNot "Self" And m_Patient IsNot "Advanced" Then
-            m_Host.SendText(TBAction & " " & m_Patient)
+            m_Host.SendText("-.5" & TBAction & " " & m_Patient)
         ElseIf m_Patient Is "Self" Then
             m_Host.SendText("-.5perceive self;-.1perceive health " & m_Patient)
         ElseIf m_Patient Is "Advanced" Then

@@ -278,33 +278,33 @@ Public Class Crutch
     End Sub
 
     Private Sub SetWoundLevel(ByVal Text As String)
-        If Text.EndsWith("insignificant") Then
+        If Text.EndsWith("insignificant") Or Text.EndsWith("insignificant (1/13)") Then
             m_iCurrentWoundLevel = 1
-        ElseIf Text.EndsWith("insignificant to negligible") Then
+        ElseIf Text.EndsWith("insignificant to negligible") Or Text.EndsWith("insignificant to negligible (1/13)") Then
             m_iCurrentWoundLevel = 2
-        ElseIf Text.EndsWith("negligible") Then
+        ElseIf Text.EndsWith("negligible") Or Text.EndsWith("negligible (2/13)") Then
             m_iCurrentWoundLevel = 3
-        ElseIf Text.EndsWith("more than minor") Then
+        ElseIf Text.EndsWith("more than minor") Or Text.EndsWith("more than minor (4/13)") Then
             m_iCurrentWoundLevel = 5
-        ElseIf Text.EndsWith("minor") Then
+        ElseIf Text.EndsWith("minor") Or Text.EndsWith("minor (3/13)") Then
             m_iCurrentWoundLevel = 4
-        ElseIf Text.EndsWith("very harmful") Then
+        ElseIf Text.EndsWith("very harmful") Or Text.EndsWith("very harmful (6/13)") Then
             m_iCurrentWoundLevel = 7
-        ElseIf Text.EndsWith("harmful") Then
+        ElseIf Text.EndsWith("harmful") Or Text.EndsWith("harmful (5/13)") Then
             m_iCurrentWoundLevel = 6
-        ElseIf Text.EndsWith("very damaging") Then
+        ElseIf Text.EndsWith("very damaging") Or Text.EndsWith("very damaging (8/13)") Then
             m_iCurrentWoundLevel = 9
-        ElseIf Text.EndsWith("damaging") Then
+        ElseIf Text.EndsWith("damaging") Or Text.EndsWith("damaging (7/13)") Then
             m_iCurrentWoundLevel = 8
-        ElseIf Text.EndsWith("very severe") Then
+        ElseIf Text.EndsWith("very severe") Or Text.EndsWith("very severe (10/13)") Then
             m_iCurrentWoundLevel = 10
-        ElseIf Text.EndsWith("severe") Then
+        ElseIf Text.EndsWith("severe") Or Text.EndsWith("severe (9/13)") Then
             m_iCurrentWoundLevel = 10
-        ElseIf Text.EndsWith("very devastating") Then
+        ElseIf Text.EndsWith("very devastating") Or Text.EndsWith("very devastating (12/13)") Then
             m_iCurrentWoundLevel = 11
-        ElseIf Text.EndsWith("devastating") Then
+        ElseIf Text.EndsWith("devastating") Or Text.EndsWith("devastating (11/13)") Then
             m_iCurrentWoundLevel = 11
-        ElseIf Text.EndsWith("useless") Then
+        ElseIf Text.EndsWith("useless") Or Text.EndsWith("useless (13/13)") Then
             m_iCurrentWoundLevel = 11
         End If
     End Sub

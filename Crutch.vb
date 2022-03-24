@@ -204,7 +204,7 @@ Public Class Crutch
                         m_Form.UpdateImage(WoundType.ScarInternal, m_oCurrentParsePart, m_iCurrentWoundLevel)
                     End If
 
-                    If Text.Trim.EndsWith("poison") Or Text.Contains("poisoned") Then
+                    If Text.Trim.EndsWith("poison") Or Text.Trim.EndsWith("Cyanide poison!") Or Text.Contains("poisoned") Then
                         m_iPoisonCount += 1
                         m_Form.SetPoison(m_iPoisonCount)
                     End If

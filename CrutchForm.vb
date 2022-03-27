@@ -202,6 +202,13 @@ Public Class CrutchForm
             SetParseTBPatient("break")
         End If
     End Sub
+    Private Sub ToolStripButtonBreak_MouseUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ToolStripButtonBreak.MouseUp
+        If (e.Button = MouseButtons.Right) Then
+            ResetImages()
+            m_Host.EchoText("#queue clear")
+            m_Host.SendText("#queue clear;-.3link all cancel")
+        End If
+    End Sub
 
     Private Sub BodyFreshExternal_Clicked(ByVal Part As Body.Part)
         TouchPart(Crutch.WoundType.FreshExternal, Part)

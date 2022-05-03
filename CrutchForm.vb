@@ -322,7 +322,7 @@ Public Class CrutchForm
         If IsNothing(m_oWoundList) Then Exit Sub
         If bLeaveBleeders = False And m_Patient IsNot "Self" Then
             SetParseTBPatient("touch")
-            m_Host.SendText("take " & m_Patient & IIf(bQuickMode, " quick", "") & " all")
+            m_Host.SendText("-.2take " & m_Patient & IIf(bQuickMode, " quick", "") & " all")
         ElseIf bLeaveBleeders = True Or bHalfOnMajor = True Or m_Patient Is "Self" Then
             m_oWoundList.Sort()
             Dim bSkip As Boolean = False

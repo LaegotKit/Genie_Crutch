@@ -544,6 +544,8 @@ Public Class CrutchForm
             m_Host.SendText("#send -.5prep regen " & m_Host.Variable("GCTextBoxManaREGE") & ";-" & m_Host.Variable("GCTextBoxDelayREGE") & "cast ")
         ElseIf type Is "BS" And m_Patient Is "Advanced" Then
             m_Host.SendText("#send -.5prep bs " & m_Host.Variable("GCTextBoxManaBS") & ";-" & m_Host.Variable("GCTextBoxDelayBS") & "cast ")
+        ElseIf type Is "FOC" And m_Patient Is "Advanced" Then
+            m_Host.SendText("#send -.5prep FOC " & m_Host.Variable("GCTextBoxManaFOC") & ";-" & m_Host.Variable("GCTextBoxDelayFOC") & "cast ")
         End If
     End Sub
 

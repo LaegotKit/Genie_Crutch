@@ -47,13 +47,13 @@ Public Class AdvancedSettingsTab
         RaiseEvent CloseTab()
     End Sub
 
-    Private Sub SpellName_Enter(sender As Object, e As EventArgs) Handles LabelSpellVH.MouseEnter, LabelSpellREGE.MouseEnter, LabelSpellREFR.MouseEnter, LabelSpellHeal.MouseEnter, LabelSpellFP.MouseEnter, LabelSpellCD.MouseEnter, LabelSpellBS.MouseEnter
+    Private Sub SpellName_Enter(sender As Object, e As EventArgs) Handles LabelSpellVH.MouseEnter, LabelSpellREGE.MouseEnter, LabelSpellREFR.MouseEnter, LabelSpellHeal.MouseEnter, LabelSpellFP.MouseEnter, LabelSpellCD.MouseEnter, LabelSpellBS.MouseEnter, LabelSpellFOC.MouseEnter
         Dim fle As Label = DirectCast(sender, Label)
         fle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         fle.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
     End Sub
 
-    Private Sub SpellName_Leave(sender As Object, e As EventArgs) Handles LabelSpellVH.MouseLeave, LabelSpellREGE.MouseLeave, LabelSpellREFR.MouseLeave, LabelSpellHeal.MouseLeave, LabelSpellFP.MouseLeave, LabelSpellCD.MouseLeave, LabelSpellBS.MouseLeave
+    Private Sub SpellName_Leave(sender As Object, e As EventArgs) Handles LabelSpellVH.MouseLeave, LabelSpellREGE.MouseLeave, LabelSpellREFR.MouseLeave, LabelSpellHeal.MouseLeave, LabelSpellFP.MouseLeave, LabelSpellCD.MouseLeave, LabelSpellBS.MouseLeave, LabelSpellFOC.MouseLeave
         Dim fle As Label = DirectCast(sender, Label)
         fle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         fle.BackColor = System.Drawing.SystemColors.Control
@@ -64,7 +64,7 @@ Public Class AdvancedSettingsTab
     Private Sub AdvancedSettingsTab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadTabConfig()
     End Sub
-    Private Sub TextBoxRW_TextChanged(sender As Object, e As EventArgs) Handles TextBoxManaCD.TextChanged, TextBoxManaHW.TextChanged, TextBoxManaVH.TextChanged, TextBoxManaREGE.TextChanged, TextBoxManaREFR.TextChanged, TextBoxManaHS.TextChanged, TextBoxManaHEAL.TextChanged, TextBoxManaFP.TextChanged, TextBoxManaBS.TextChanged, TextBoxDelayVH.TextChanged, TextBoxDelayREGE.TextChanged, TextBoxDelayREFR.TextChanged, TextBoxDelayHW.TextChanged, TextBoxDelayHS.TextChanged, TextBoxDelayHEAL.TextChanged, TextBoxDelayFP.TextChanged, TextBoxDelayCD.TextChanged, TextBoxDelayBS.TextChanged
+    Private Sub TextBoxRW_TextChanged(sender As Object, e As EventArgs) Handles TextBoxManaCD.TextChanged, TextBoxManaHW.TextChanged, TextBoxManaVH.TextChanged, TextBoxManaREGE.TextChanged, TextBoxManaREFR.TextChanged, TextBoxManaHS.TextChanged, TextBoxManaHEAL.TextChanged, TextBoxManaFP.TextChanged, TextBoxManaBS.TextChanged, TextBoxDelayVH.TextChanged, TextBoxDelayREGE.TextChanged, TextBoxDelayREFR.TextChanged, TextBoxDelayHW.TextChanged, TextBoxDelayHS.TextChanged, TextBoxDelayHEAL.TextChanged, TextBoxDelayFP.TextChanged, TextBoxDelayCD.TextChanged, TextBoxDelayBS.TextChanged, TextBoxManaFOC.TextChanged, TextBoxDelayFOC.TextChanged
         If AdvancedSettingsLoaded = True Then
             Dim TextBoxName As String = Me.ActiveControl.Name
             Dim PropName As String = Mid(Me.ActiveControl.Name, 8)
@@ -86,6 +86,7 @@ Public Class AdvancedSettingsTab
         RaiseEvent TexboxRW_Load(Me.TextBoxDelayREFR.Text, "GCTextBoxDelayREFR")
         RaiseEvent TexboxRW_Load(Me.TextBoxDelayREGE.Text, "GCTextBoxDelayREGE")
         RaiseEvent TexboxRW_Load(Me.TextBoxDelayVH.Text, "GCTextBoxDelayVH")
+        RaiseEvent TexboxRW_Load(Me.TextBoxDelayFOC.Text, "GCTextBoxDelayFOC")
         RaiseEvent TexboxRW_Load(Me.TextBoxManaBS.Text, "GCTextBoxManaBS")
         RaiseEvent TexboxRW_Load(Me.TextBoxManaCD.Text, "GCTextBoxManaCD")
         RaiseEvent TexboxRW_Load(Me.TextBoxManaFP.Text, "GCTextBoxManaFP")
@@ -95,6 +96,7 @@ Public Class AdvancedSettingsTab
         RaiseEvent TexboxRW_Load(Me.TextBoxManaREFR.Text, "GCTextBoxManaREFR")
         RaiseEvent TexboxRW_Load(Me.TextBoxManaREGE.Text, "GCTextBoxManaREGE")
         RaiseEvent TexboxRW_Load(Me.TextBoxManaVH.Text, "GCTextBoxManaVH")
+        RaiseEvent TexboxRW_Load(Me.TextBoxManaFOC.Text, "GCTextBoxManaFOC")
 
         LoadTimers()
 
@@ -128,8 +130,8 @@ Public Class AdvancedSettingsTab
         RaiseEvent TouchType("vitality")
     End Sub
 
-    Private Sub LabelSpellREFR_clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellREFR.MouseClick
-        RaiseEvent TouchType("REFR")
+    Private Sub LabelSpellFOC_clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellFOC.MouseClick
+        RaiseEvent TouchType("FOC")
     End Sub
 
     Private Sub LabelSpellHEAL_Clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellHeal.MouseClick
@@ -142,6 +144,9 @@ Public Class AdvancedSettingsTab
 
     Private Sub LabelSpellBS_clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellBS.MouseClick
         RaiseEvent TouchType("BS")
+    End Sub
+    Private Sub LabelSpellREFR_clicked(sender As Object, e As MouseEventArgs) Handles LabelSpellREFR.MouseClick
+        RaiseEvent TouchType("REFR")
     End Sub
 
     Private Sub Show_Hide_ButtonClicked(sender As Object, e As EventArgs) Handles ShowButton.Click

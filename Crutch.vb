@@ -118,9 +118,15 @@ Public Class Crutch
                 ElseIf Text.StartsWith("You lightly touch ") Then
                     m_Patient = Text.Substring(18).Replace(".", "").Replace(", barely brushing her skin", "").Replace(", barely brushing his skin", "").Trim
                     SetPatient(m_Patient)
-                ElseIf Text.StartsWith("You touch ") Then
-                    m_Patient = Text.Substring(10).Replace(".", "").Trim
-                    SetPatient(m_Patient)
+                ElseIf Text.StartsWith("You touch ") Or Text.StartsWith("You hesitantly touch ") Or Text.StartsWith("You briefly touch ") Then
+                    Dim regex As Regex = New Regex("^You (?:hesitantly |briefly )?touch ([\w\-\']+)(?:\.|\swith|,\svisibly|,\sattempting|\sand|\son)")
+                    Dim match As Match = regex.Match(Text)
+                    If match.Success Then
+                        m_Patient = match.Groups(1).Value
+                        SetPatient(m_Patient)
+                    End If
+                    '                    m_Patient = Text.Substring(10).Replace(".", "").Trim
+                    '                    SetPatient(m_Patient)
                 ElseIf Text.StartsWith("You lay your hand on ") Then
                     m_Patient = Text.Substring(21).Replace(".", "").Replace("'s arm", "").Trim
                     SetPatient(m_Patient)

@@ -62,6 +62,9 @@ Partial Class AdvancedSettingsTab
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ShowButton = New System.Windows.Forms.Button()
         Me.TouchWho = New System.Windows.Forms.Button()
+        Me.LabelSpellFOC = New System.Windows.Forms.Label()
+        Me.TextBoxManaFOC = New System.Windows.Forms.TextBox()
+        Me.TextBoxDelayFOC = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'ButtonClose
@@ -78,7 +81,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellHW.AutoSize = True
         Me.LabelSpellHW.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellHW.Location = New System.Drawing.Point(13, 125)
+        Me.LabelSpellHW.Location = New System.Drawing.Point(13, 109)
         Me.LabelSpellHW.Name = "LabelSpellHW"
         Me.LabelSpellHW.Size = New System.Drawing.Size(26, 13)
         Me.LabelSpellHW.TabIndex = 33
@@ -87,7 +90,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaHS
         '
         Me.TextBoxManaHS.AcceptsTab = True
-        Me.TextBoxManaHS.Location = New System.Drawing.Point(55, 138)
+        Me.TextBoxManaHS.Location = New System.Drawing.Point(55, 122)
         Me.TextBoxManaHS.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaHS.MaxLength = 3
         Me.TextBoxManaHS.Name = "TextBoxManaHS"
@@ -99,7 +102,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelMana.AutoSize = True
         Me.LabelMana.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelMana.Location = New System.Drawing.Point(13, 101)
+        Me.LabelMana.Location = New System.Drawing.Point(13, 85)
         Me.LabelMana.Name = "LabelMana"
         Me.LabelMana.Size = New System.Drawing.Size(30, 13)
         Me.LabelMana.TabIndex = 38
@@ -109,7 +112,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelDelay.AutoSize = True
         Me.LabelDelay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelDelay.Location = New System.Drawing.Point(85, 101)
+        Me.LabelDelay.Location = New System.Drawing.Point(85, 85)
         Me.LabelDelay.Name = "LabelDelay"
         Me.LabelDelay.Size = New System.Drawing.Size(34, 13)
         Me.LabelDelay.TabIndex = 39
@@ -119,7 +122,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.TextBoxManaHW.AcceptsTab = True
         Me.TextBoxManaHW.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TextBoxManaHW.Location = New System.Drawing.Point(55, 118)
+        Me.TextBoxManaHW.Location = New System.Drawing.Point(55, 102)
         Me.TextBoxManaHW.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaHW.MaxLength = 3
         Me.TextBoxManaHW.Name = "TextBoxManaHW"
@@ -130,7 +133,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayHW
         '
         Me.TextBoxDelayHW.AcceptsTab = True
-        Me.TextBoxDelayHW.Location = New System.Drawing.Point(88, 118)
+        Me.TextBoxDelayHW.Location = New System.Drawing.Point(88, 102)
         Me.TextBoxDelayHW.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayHW.MaxLength = 3
         Me.TextBoxDelayHW.Name = "TextBoxDelayHW"
@@ -141,7 +144,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayHS
         '
         Me.TextBoxDelayHS.AcceptsTab = True
-        Me.TextBoxDelayHS.Location = New System.Drawing.Point(88, 138)
+        Me.TextBoxDelayHS.Location = New System.Drawing.Point(88, 122)
         Me.TextBoxDelayHS.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayHS.MaxLength = 3
         Me.TextBoxDelayHS.Name = "TextBoxDelayHS"
@@ -153,17 +156,17 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellHS.AutoSize = True
         Me.LabelSpellHS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellHS.Location = New System.Drawing.Point(13, 145)
+        Me.LabelSpellHS.Location = New System.Drawing.Point(13, 129)
         Me.LabelSpellHS.Name = "LabelSpellHS"
         Me.LabelSpellHS.Size = New System.Drawing.Size(22, 13)
-        Me.LabelSpellHS.TabIndex = 43
+        Me.LabelSpellHS.TabIndex = 82
         Me.LabelSpellHS.Text = "HS"
         '
         'LabelSpellFP
         '
         Me.LabelSpellFP.AutoSize = True
         Me.LabelSpellFP.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellFP.Location = New System.Drawing.Point(13, 165)
+        Me.LabelSpellFP.Location = New System.Drawing.Point(13, 149)
         Me.LabelSpellFP.Name = "LabelSpellFP"
         Me.LabelSpellFP.Size = New System.Drawing.Size(20, 13)
         Me.LabelSpellFP.TabIndex = 44
@@ -173,7 +176,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellCD.AutoSize = True
         Me.LabelSpellCD.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellCD.Location = New System.Drawing.Point(13, 185)
+        Me.LabelSpellCD.Location = New System.Drawing.Point(13, 169)
         Me.LabelSpellCD.Name = "LabelSpellCD"
         Me.LabelSpellCD.Size = New System.Drawing.Size(22, 13)
         Me.LabelSpellCD.TabIndex = 45
@@ -182,7 +185,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaFP
         '
         Me.TextBoxManaFP.AcceptsTab = True
-        Me.TextBoxManaFP.Location = New System.Drawing.Point(55, 158)
+        Me.TextBoxManaFP.Location = New System.Drawing.Point(55, 142)
         Me.TextBoxManaFP.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaFP.MaxLength = 3
         Me.TextBoxManaFP.Name = "TextBoxManaFP"
@@ -193,7 +196,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayFP
         '
         Me.TextBoxDelayFP.AcceptsTab = True
-        Me.TextBoxDelayFP.Location = New System.Drawing.Point(88, 158)
+        Me.TextBoxDelayFP.Location = New System.Drawing.Point(88, 142)
         Me.TextBoxDelayFP.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayFP.MaxLength = 3
         Me.TextBoxDelayFP.Name = "TextBoxDelayFP"
@@ -204,7 +207,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerFP
         '
         Me.TextBoxTimerFP.AcceptsTab = True
-        Me.TextBoxTimerFP.Location = New System.Drawing.Point(122, 158)
+        Me.TextBoxTimerFP.Location = New System.Drawing.Point(122, 142)
         Me.TextBoxTimerFP.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerFP.MaxLength = 3
         Me.TextBoxTimerFP.Name = "TextBoxTimerFP"
@@ -216,7 +219,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaCD
         '
         Me.TextBoxManaCD.AcceptsTab = True
-        Me.TextBoxManaCD.Location = New System.Drawing.Point(55, 178)
+        Me.TextBoxManaCD.Location = New System.Drawing.Point(55, 162)
         Me.TextBoxManaCD.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaCD.MaxLength = 3
         Me.TextBoxManaCD.Name = "TextBoxManaCD"
@@ -227,7 +230,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayCD
         '
         Me.TextBoxDelayCD.AcceptsTab = True
-        Me.TextBoxDelayCD.Location = New System.Drawing.Point(88, 178)
+        Me.TextBoxDelayCD.Location = New System.Drawing.Point(88, 162)
         Me.TextBoxDelayCD.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayCD.MaxLength = 3
         Me.TextBoxDelayCD.Name = "TextBoxDelayCD"
@@ -239,7 +242,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellVH.AutoSize = True
         Me.LabelSpellVH.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellVH.Location = New System.Drawing.Point(13, 205)
+        Me.LabelSpellVH.Location = New System.Drawing.Point(13, 189)
         Me.LabelSpellVH.Name = "LabelSpellVH"
         Me.LabelSpellVH.Size = New System.Drawing.Size(22, 13)
         Me.LabelSpellVH.TabIndex = 51
@@ -248,7 +251,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerCD
         '
         Me.TextBoxTimerCD.AcceptsTab = True
-        Me.TextBoxTimerCD.Location = New System.Drawing.Point(122, 178)
+        Me.TextBoxTimerCD.Location = New System.Drawing.Point(122, 162)
         Me.TextBoxTimerCD.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerCD.MaxLength = 3
         Me.TextBoxTimerCD.Name = "TextBoxTimerCD"
@@ -260,7 +263,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaVH
         '
         Me.TextBoxManaVH.AcceptsTab = True
-        Me.TextBoxManaVH.Location = New System.Drawing.Point(55, 198)
+        Me.TextBoxManaVH.Location = New System.Drawing.Point(55, 182)
         Me.TextBoxManaVH.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaVH.MaxLength = 3
         Me.TextBoxManaVH.Name = "TextBoxManaVH"
@@ -272,7 +275,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellREFR.AutoSize = True
         Me.LabelSpellREFR.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellREFR.Location = New System.Drawing.Point(13, 225)
+        Me.LabelSpellREFR.Location = New System.Drawing.Point(13, 289)
         Me.LabelSpellREFR.Name = "LabelSpellREFR"
         Me.LabelSpellREFR.Size = New System.Drawing.Size(36, 13)
         Me.LabelSpellREFR.TabIndex = 54
@@ -281,7 +284,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayVH
         '
         Me.TextBoxDelayVH.AcceptsTab = True
-        Me.TextBoxDelayVH.Location = New System.Drawing.Point(88, 198)
+        Me.TextBoxDelayVH.Location = New System.Drawing.Point(88, 182)
         Me.TextBoxDelayVH.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayVH.MaxLength = 3
         Me.TextBoxDelayVH.Name = "TextBoxDelayVH"
@@ -292,7 +295,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaREFR
         '
         Me.TextBoxManaREFR.AcceptsTab = True
-        Me.TextBoxManaREFR.Location = New System.Drawing.Point(55, 218)
+        Me.TextBoxManaREFR.Location = New System.Drawing.Point(55, 282)
         Me.TextBoxManaREFR.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaREFR.MaxLength = 3
         Me.TextBoxManaREFR.Name = "TextBoxManaREFR"
@@ -303,7 +306,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayREFR
         '
         Me.TextBoxDelayREFR.AcceptsTab = True
-        Me.TextBoxDelayREFR.Location = New System.Drawing.Point(88, 218)
+        Me.TextBoxDelayREFR.Location = New System.Drawing.Point(88, 282)
         Me.TextBoxDelayREFR.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayREFR.MaxLength = 3
         Me.TextBoxDelayREFR.Name = "TextBoxDelayREFR"
@@ -315,7 +318,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellHeal.AutoSize = True
         Me.LabelSpellHeal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellHeal.Location = New System.Drawing.Point(13, 245)
+        Me.LabelSpellHeal.Location = New System.Drawing.Point(13, 229)
         Me.LabelSpellHeal.Name = "LabelSpellHeal"
         Me.LabelSpellHeal.Size = New System.Drawing.Size(35, 13)
         Me.LabelSpellHeal.TabIndex = 56
@@ -324,7 +327,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerREFR
         '
         Me.TextBoxTimerREFR.AcceptsTab = True
-        Me.TextBoxTimerREFR.Location = New System.Drawing.Point(122, 218)
+        Me.TextBoxTimerREFR.Location = New System.Drawing.Point(122, 282)
         Me.TextBoxTimerREFR.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerREFR.MaxLength = 3
         Me.TextBoxTimerREFR.Name = "TextBoxTimerREFR"
@@ -336,7 +339,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaHEAL
         '
         Me.TextBoxManaHEAL.AcceptsTab = True
-        Me.TextBoxManaHEAL.Location = New System.Drawing.Point(55, 238)
+        Me.TextBoxManaHEAL.Location = New System.Drawing.Point(55, 222)
         Me.TextBoxManaHEAL.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaHEAL.MaxLength = 3
         Me.TextBoxManaHEAL.Name = "TextBoxManaHEAL"
@@ -348,7 +351,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellREGE.AutoSize = True
         Me.LabelSpellREGE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellREGE.Location = New System.Drawing.Point(13, 265)
+        Me.LabelSpellREGE.Location = New System.Drawing.Point(13, 249)
         Me.LabelSpellREGE.Name = "LabelSpellREGE"
         Me.LabelSpellREGE.Size = New System.Drawing.Size(37, 13)
         Me.LabelSpellREGE.TabIndex = 59
@@ -357,7 +360,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayHEAL
         '
         Me.TextBoxDelayHEAL.AcceptsTab = True
-        Me.TextBoxDelayHEAL.Location = New System.Drawing.Point(88, 238)
+        Me.TextBoxDelayHEAL.Location = New System.Drawing.Point(88, 222)
         Me.TextBoxDelayHEAL.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayHEAL.MaxLength = 3
         Me.TextBoxDelayHEAL.Name = "TextBoxDelayHEAL"
@@ -368,7 +371,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerHEAL
         '
         Me.TextBoxTimerHEAL.AcceptsTab = True
-        Me.TextBoxTimerHEAL.Location = New System.Drawing.Point(122, 238)
+        Me.TextBoxTimerHEAL.Location = New System.Drawing.Point(122, 222)
         Me.TextBoxTimerHEAL.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerHEAL.MaxLength = 3
         Me.TextBoxTimerHEAL.Name = "TextBoxTimerHEAL"
@@ -380,7 +383,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaREGE
         '
         Me.TextBoxManaREGE.AcceptsTab = True
-        Me.TextBoxManaREGE.Location = New System.Drawing.Point(55, 258)
+        Me.TextBoxManaREGE.Location = New System.Drawing.Point(55, 242)
         Me.TextBoxManaREGE.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaREGE.MaxLength = 3
         Me.TextBoxManaREGE.Name = "TextBoxManaREGE"
@@ -391,7 +394,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayREGE
         '
         Me.TextBoxDelayREGE.AcceptsTab = True
-        Me.TextBoxDelayREGE.Location = New System.Drawing.Point(88, 258)
+        Me.TextBoxDelayREGE.Location = New System.Drawing.Point(88, 242)
         Me.TextBoxDelayREGE.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayREGE.MaxLength = 3
         Me.TextBoxDelayREGE.Name = "TextBoxDelayREGE"
@@ -403,7 +406,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelTimer.AutoSize = True
         Me.LabelTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelTimer.Location = New System.Drawing.Point(119, 101)
+        Me.LabelTimer.Location = New System.Drawing.Point(119, 85)
         Me.LabelTimer.Name = "LabelTimer"
         Me.LabelTimer.Size = New System.Drawing.Size(33, 13)
         Me.LabelTimer.TabIndex = 63
@@ -412,7 +415,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerREGE
         '
         Me.TextBoxTimerREGE.AcceptsTab = True
-        Me.TextBoxTimerREGE.Location = New System.Drawing.Point(122, 258)
+        Me.TextBoxTimerREGE.Location = New System.Drawing.Point(122, 242)
         Me.TextBoxTimerREGE.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerREGE.MaxLength = 3
         Me.TextBoxTimerREGE.Name = "TextBoxTimerREGE"
@@ -424,7 +427,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxManaBS
         '
         Me.TextBoxManaBS.AcceptsTab = True
-        Me.TextBoxManaBS.Location = New System.Drawing.Point(55, 278)
+        Me.TextBoxManaBS.Location = New System.Drawing.Point(55, 262)
         Me.TextBoxManaBS.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxManaBS.MaxLength = 3
         Me.TextBoxManaBS.Name = "TextBoxManaBS"
@@ -435,7 +438,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxDelayBS
         '
         Me.TextBoxDelayBS.AcceptsTab = True
-        Me.TextBoxDelayBS.Location = New System.Drawing.Point(88, 278)
+        Me.TextBoxDelayBS.Location = New System.Drawing.Point(88, 262)
         Me.TextBoxDelayBS.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxDelayBS.MaxLength = 3
         Me.TextBoxDelayBS.Name = "TextBoxDelayBS"
@@ -446,7 +449,7 @@ Partial Class AdvancedSettingsTab
         'TextBoxTimerBS
         '
         Me.TextBoxTimerBS.AcceptsTab = True
-        Me.TextBoxTimerBS.Location = New System.Drawing.Point(122, 278)
+        Me.TextBoxTimerBS.Location = New System.Drawing.Point(122, 262)
         Me.TextBoxTimerBS.Margin = New System.Windows.Forms.Padding(0)
         Me.TextBoxTimerBS.MaxLength = 3
         Me.TextBoxTimerBS.Name = "TextBoxTimerBS"
@@ -459,7 +462,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.LabelSpellBS.AutoSize = True
         Me.LabelSpellBS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpellBS.Location = New System.Drawing.Point(13, 285)
+        Me.LabelSpellBS.Location = New System.Drawing.Point(13, 269)
         Me.LabelSpellBS.Name = "LabelSpellBS"
         Me.LabelSpellBS.Size = New System.Drawing.Size(21, 13)
         Me.LabelSpellBS.TabIndex = 75
@@ -469,7 +472,7 @@ Partial Class AdvancedSettingsTab
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label1.Location = New System.Drawing.Point(52, 101)
+        Me.Label1.Location = New System.Drawing.Point(52, 85)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 76
@@ -477,7 +480,7 @@ Partial Class AdvancedSettingsTab
         '
         'ShowButton
         '
-        Me.ShowButton.Location = New System.Drawing.Point(16, 63)
+        Me.ShowButton.Location = New System.Drawing.Point(16, 47)
         Me.ShowButton.Name = "ShowButton"
         Me.ShowButton.Size = New System.Drawing.Size(58, 23)
         Me.ShowButton.TabIndex = 77
@@ -486,16 +489,51 @@ Partial Class AdvancedSettingsTab
         '
         'TouchWho
         '
-        Me.TouchWho.Location = New System.Drawing.Point(88, 63)
+        Me.TouchWho.Location = New System.Drawing.Point(88, 47)
         Me.TouchWho.Name = "TouchWho"
         Me.TouchWho.Size = New System.Drawing.Size(58, 23)
         Me.TouchWho.TabIndex = 78
         Me.TouchWho.Text = "TouchWho"
         Me.TouchWho.UseVisualStyleBackColor = True
         '
+        'LabelSpellFOC
+        '
+        Me.LabelSpellFOC.AutoSize = True
+        Me.LabelSpellFOC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpellFOC.Location = New System.Drawing.Point(13, 209)
+        Me.LabelSpellFOC.Name = "LabelSpellFOC"
+        Me.LabelSpellFOC.Size = New System.Drawing.Size(28, 13)
+        Me.LabelSpellFOC.TabIndex = 75
+        Me.LabelSpellFOC.Text = "FOC"
+        '
+        'TextBoxManaFOC
+        '
+        Me.TextBoxManaFOC.AcceptsTab = True
+        Me.TextBoxManaFOC.Location = New System.Drawing.Point(55, 202)
+        Me.TextBoxManaFOC.Margin = New System.Windows.Forms.Padding(0)
+        Me.TextBoxManaFOC.MaxLength = 3
+        Me.TextBoxManaFOC.Name = "TextBoxManaFOC"
+        Me.TextBoxManaFOC.Size = New System.Drawing.Size(25, 20)
+        Me.TextBoxManaFOC.TabIndex = 79
+        Me.TextBoxManaFOC.WordWrap = False
+        '
+        'TextBoxDelayFOC
+        '
+        Me.TextBoxDelayFOC.AcceptsTab = True
+        Me.TextBoxDelayFOC.Location = New System.Drawing.Point(88, 202)
+        Me.TextBoxDelayFOC.Margin = New System.Windows.Forms.Padding(0)
+        Me.TextBoxDelayFOC.MaxLength = 3
+        Me.TextBoxDelayFOC.Name = "TextBoxDelayFOC"
+        Me.TextBoxDelayFOC.Size = New System.Drawing.Size(25, 20)
+        Me.TextBoxDelayFOC.TabIndex = 80
+        Me.TextBoxDelayFOC.WordWrap = False
+        '
         'AdvancedSettingsTab
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
+        Me.Controls.Add(Me.LabelSpellFOC)
+        Me.Controls.Add(Me.TextBoxManaFOC)
+        Me.Controls.Add(Me.TextBoxDelayFOC)
         Me.Controls.Add(Me.TouchWho)
         Me.Controls.Add(Me.ShowButton)
         Me.Controls.Add(Me.Label1)
@@ -582,4 +620,7 @@ Partial Class AdvancedSettingsTab
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents ShowButton As Windows.Forms.Button
     Friend WithEvents TouchWho As Windows.Forms.Button
+    Friend WithEvents LabelSpellFOC As Windows.Forms.Label
+    Friend WithEvents TextBoxManaFOC As Windows.Forms.TextBox
+    Friend WithEvents TextBoxDelayFOC As Windows.Forms.TextBox
 End Class

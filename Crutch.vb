@@ -32,7 +32,7 @@ Public Class Crutch
 
     Public ReadOnly Property Version() As String Implements GeniePlugin.Interfaces.IPlugin.Version
         Get
-            Return "2.2.1"
+            Return "2.2.2"
         End Get
     End Property
 
@@ -47,6 +47,7 @@ Public Class Crutch
         If Not IsNothing(m_Host.ParentForm) Then
             m_Form.MdiParent = m_Host.ParentForm
         End If
+
     End Sub
 
     Public Sub LoadConfig()
@@ -112,27 +113,13 @@ Public Class Crutch
         Try
             If Not IsNothing(m_Host) And (Crutch.m_SHButton = True Or Crutch.m_Shown = True) Then
                 m_iCurrentWoundLevel = 0
-                If Text.StartsWith("You reluctantly touch ") Then
-                    m_Patient = Text.Substring(22).Replace(".", "").Replace(", a faint expression of distaste on your face", "").Trim
-                    SetPatient(m_Patient)
-                ElseIf Text.StartsWith("You lightly touch ") Then
-                    m_Patient = Text.Substring(18).Replace(".", "").Replace(", barely brushing her skin", "").Replace(", barely brushing his skin", "").Trim
-                    SetPatient(m_Patient)
-                ElseIf Text.StartsWith("You touch ") Or Text.StartsWith("You hesitantly touch ") Or Text.StartsWith("You briefly touch ") Then
-                    Dim regex As Regex = New Regex("^You (?:hesitantly |briefly )?touch ([\w\-\']+)(?:\.|\swith|,\svisibly|,\sattempting|\sand|\son)")
+                If Text.StartsWith("You sense a successful empathic link has been forged between you and ") Then
+                    Dim regex As Regex = New Regex("^You sense a successful empathic link has been forged between you and ([^\.\!\,]+)[\.\!\,]")
                     Dim match As Match = regex.Match(Text)
                     If match.Success Then
                         m_Patient = match.Groups(1).Value
                         SetPatient(m_Patient)
                     End If
-                    '                    m_Patient = Text.Substring(10).Replace(".", "").Trim
-                    '                    SetPatient(m_Patient)
-                ElseIf Text.StartsWith("You lay your hand on ") Then
-                    m_Patient = Text.Substring(21).Replace(".", "").Replace("'s arm", "").Trim
-                    SetPatient(m_Patient)
-                ElseIf Text.StartsWith("You rest your hand on ") Then
-                    m_Patient = Text.Substring(22).Replace(".", "").Replace("'s arm with a soft smile", "").Trim
-                    SetPatient(m_Patient)
                 End If
 
                 If Text.StartsWith("Your injuries include") Then
@@ -151,6 +138,12 @@ Public Class Crutch
                     If Crutch.m_TWButton = False Then
                         m_bIsParsing = True
                     End If
+                End If
+
+                If Text.Trim.StartsWith("You close your eyes, centering your thoughts On your own life essence, but feel only an aching emptiness.") Then
+                    m_Patient = "Self"
+                    SetPatient(m_Patient)
+                    m_Form.ResetImages()
                 End If
 
                 If m_bIsParsing = True And Text.StartsWith("    The presence of ") Then

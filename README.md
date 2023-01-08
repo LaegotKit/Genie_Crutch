@@ -8,3 +8,6 @@ Right clicking on tab headers will open a Link menu for the selected tab and dou
 
 
 ![image](https://user-images.githubusercontent.com/100539902/156951025-b26efc12-b5a9-49c3-8b4b-3761478672eb.png)
+
+Download lastest DLL:
+https://github.com/LaegotKit/Genie_Crutch/raw/main/bin/Debug/GenieCrutch.dll

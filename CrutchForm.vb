@@ -3,6 +3,7 @@ Imports System.Windows.Forms
 Imports System.Drawing
 Imports XMLConfig
 Imports Crutch
+Imports Body
 Public Class CrutchForm
     Private m_Host As GeniePlugin.Interfaces.IHost
     Private m_Config As XMLConfig
@@ -88,15 +89,15 @@ Public Class CrutchForm
         End If
     End Sub
     Private Sub ShowMeInternal()
-        Me.Enabled = false
+        Me.Enabled = False
         Me.Show()
         Me.BringToFront()
         Me.Enabled = True
         Crutch.m_Shown = True
     End Sub
-    
 
-   Delegate Sub SetDiseaseDelegate()
+
+    Delegate Sub SetDiseaseDelegate()
     Public Sub SetDisease()
         If Me.InvokeRequired() = True Then
             Me.Invoke(New SetDiseaseDelegate(AddressOf SetDiseaseInternal))
@@ -211,19 +212,19 @@ Public Class CrutchForm
     End Sub
 
     Private Sub BodyFreshExternal_Clicked(ByVal Part As Body.Part)
-        TouchPart(Crutch.WoundType.FreshExternal, Part)
+        GetWound(Crutch.WoundType.FreshExternal, Part)
     End Sub
 
     Private Sub BodyScarExternal_Clicked(ByVal Part As Body.Part)
-        TouchPart(Crutch.WoundType.ScarExternal, Part)
+        GetWound(Crutch.WoundType.ScarExternal, Part)
     End Sub
 
     Private Sub BodyFreshInternal_Clicked(ByVal Part As Body.Part)
-        TouchPart(Crutch.WoundType.FreshInternal, Part)
+        GetWound(Crutch.WoundType.FreshInternal, Part)
     End Sub
 
     Private Sub BodyScarInternal_Clicked(ByVal Part As Body.Part)
-        TouchPart(Crutch.WoundType.ScarInternal, Part)
+        GetWound(Crutch.WoundType.ScarInternal, Part)
     End Sub
 
     Private Sub BodyMenuFreshExternal_BodyPartMenuClicked(ByVal Part As Body.Part, ByVal Method As String)
@@ -240,6 +241,15 @@ Public Class CrutchForm
 
     Private Sub BodyScarInternal_BodyPartMenuClicked(ByVal Part As Body.Part, ByVal Method As String)
         TouchPart(Crutch.WoundType.ScarInternal, Part, "", " " & Method)
+    End Sub
+
+    Private Sub GetWound(ByVal Type As Crutch.WoundType, ByVal Part As Body.Part)
+        For Each obj As Wound In m_oWoundList
+            '            m_Host.EchoText("the wound is Type " & obj.WoundType.ToString() & " " & obj.BodyPart.ToString() & " " & obj.Level.ToString())
+            If obj.WoundType = Type And obj.BodyPart = Part Then
+                TouchPart(Type, Part, "0.25 ", IIf(bHalfOnMajor And obj.Level > 7, " half", "") & IIf(bQuickMode, " quick", ""))
+            End If
+        Next
     End Sub
 
     Private Sub TouchPart(ByVal WoundType As Crutch.WoundType, ByVal BodyPart As Body.Part, Optional ByVal PreCommand As String = "", Optional ByVal PostCommand As String = "")
@@ -513,7 +523,12 @@ Public Class CrutchForm
     End Sub
 
     Private Sub CrutchTab_TouchPart(ByVal WoundType As Crutch.WoundType, ByVal BodyPart As Body.Part, ByVal PreCommand As String, ByVal PostCommand As String)
-        TouchPart(WoundType, BodyPart, PreCommand, PostCommand)
+        'm_Host.EchoText("the wound is Type " & WoundType.ToString() & " " & BodyPart.ToString() & " ")
+        If PreCommand = "" And PostCommand = "" Then
+            GetWound(WoundType, BodyPart)
+        Else
+            TouchPart(WoundType, BodyPart, PreCommand, PostCommand)
+        End If
     End Sub
 
     Private Sub CrutchTab_TouchType(ByVal type As String)
@@ -573,7 +588,7 @@ Public Class CrutchForm
         Next
 
         Return Nothing
-        End Function
+    End Function
 
     Private Function SelectedCrutchTab() As CrutchTab
         For Each c As Control In TabPatients.SelectedTab.Controls
@@ -586,8 +601,8 @@ Public Class CrutchForm
     End Function
 
     Private Sub TabPatients_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPatients.SelectedIndexChanged
-            SelectedTabChanged()
-        End Sub
+        SelectedTabChanged()
+    End Sub
 
     Private Sub SelectedTabChanged()
         If IsNothing(TabPatients.SelectedTab) Then
@@ -608,8 +623,8 @@ Public Class CrutchForm
     End Sub
 
     Private Sub ToolStripButtonTakeAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButtonTakeAll.Click
-            TakeAll()
-        End Sub
+        TakeAll()
+    End Sub
 
 #Region "Contextmenu"
     Public Shared m_TabIndex As Integer = -1

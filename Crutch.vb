@@ -32,7 +32,7 @@ Public Class Crutch
 
     Public ReadOnly Property Version() As String Implements GeniePlugin.Interfaces.IPlugin.Version
         Get
-            Return "2.2.2"
+            Return "2.2.25"
         End Get
     End Property
 
